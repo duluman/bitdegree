@@ -203,3 +203,52 @@ while(a < myTeam.length) {
 for (member of myTeam) {
     console.log(member)
 }
+
+
+// ------------  functions in JS
+// function - in JS >>> def - in Python
+
+function fullNameF() {
+    first_name = 'Cristian';
+    last_name = 'Man'
+    console.log(`The full name is: ${first_name} ${last_name}`)
+}
+
+fullNameF()
+
+
+function fullNameSmart(f_name, l_name) {
+    console.log(`Hi, my name is ${f_name} ${l_name}`)
+    return f_name + ' ' + l_name
+}
+
+fullNameSmart('Cris', 'Tian')
+
+var just_aName = fullNameSmart('Dan', 'Puric')
+console.log(just_aName)
+
+
+function addFunction(number1, number2) {
+    return number1 + number2
+}
+
+console.log(addFunction(15, 17))
+
+
+// ------------  arrow functions in JS
+
+const addTwoNumbers = (n1, n2) => {
+    return n1 + n2
+}
+
+console.log(addTwoNumbers(7, 31))
+
+
+const addTwoNumbersV2 = (nr1, nr2) => nr1 + nr2
+// looks like lambda functions in Python (one line function)
+
+console.log(addTwoNumbersV2(12, 48))
+
+const funName = a_name => console.log(`What a funny name, ${a_name}`)
+// if we have one parameter we can leave out the parentheses
+funName('Stefan')

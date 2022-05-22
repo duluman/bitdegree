@@ -179,3 +179,194 @@ function addSum2(num) {
 addSum2(3);
 
 
+// In Computer Science a queue is an abstract Data Structure where items are kept in order. 
+// New items can be added at the back of the queue and old items are taken off from the front of the queue.
+
+// if (condition is true) {
+//   statement is executed
+// }
+
+function trueOrFalse(wasThatTrue) {
+  if (wasThatTrue === true) {
+    return "Yes, that was true"
+  }
+
+  return "No, that was false"
+  }
+
+
+  // Strict equality (===) is the counterpart to the equality operator (==). However, unlike the equality operator, 
+  // which attempts to convert both values being compared to a common type, the strict equality operator does not perform a type conversion.
+
+  3 ===  3  // true >>> returns true because JavaScript performs type conversion from string to number.
+3 === '3' // false
+
+
+// If the values being compared are not of the same type, the equality operator will perform a type conversion, and then evaluate the values. 
+// However, the strict equality operator will compare both the data type and value as-is, without converting one type to the other.
+
+
+// The strict inequality operator (!==) is the logical opposite of the strict equality operator. 
+// It means "Strictly Not Equal" and returns false where strict equality would return true and vice versa. 
+// The strict inequality operator will not convert data types.
+
+
+function testGreaterOrEqual(val) {
+  if (val >= 20) {  
+    return "20 or Over";
+  }
+
+  if (val >= 10) {  
+    return "10 or Over";
+  }
+
+  return "Less than 10";
+}
+
+testGreaterOrEqual(10);
+
+
+function testLogicalAnd(num) { 
+  if (num > 5 && num < 10) {
+  return "Yes";
+  }
+  return "No"; }
+
+
+function elseIfStatements(num3) {
+  if (num3 > 15) {
+    return "Bigger than 15";
+  } else if (num3 < 5) {
+    return "Smaller than 5";
+  } else {
+    return "Between 5 and 15";
+  }
+}
+
+
+/* 
+If you have many options to choose from, use a switch statement. A switch statement tests a value and can have many case statements which define various possible values. 
+Statements are executed from the first matched case value until a break is encountered.
+
+Here is an example of a switch statement:
+
+switch(lowercaseLetter) {
+  case "a":
+    console.log("A");
+    break;
+  case "b":
+    console.log("B");
+    break;
+}
+
+case values are tested with strict equality (===). The break tells JavaScript to stop executing statements. 
+If the break is omitted, the next statement will be executed.
+*/
+
+function caseInSwitch(val) {
+  let answer = "";
+  switch(val) {
+    case 1:
+      answer = 'alpha';
+      break; 
+    case 2:
+      answer = 'beta';
+      break;
+    case 3: 
+      answer = 'gamma';
+      break;
+    case 4:
+      answer = 'delta';
+      break;
+  }
+}
+
+caseInSwitch(1);
+
+
+/* 
+In a switch statement you may not be able to specify all possible values as case statements. 
+Instead, you can add the default statement which will be executed if no matching case statements are found. 
+Think of it like the final else statement in an if/else chain.
+
+A default statement should be the last case.
+
+switch (num) {
+  case value1:
+    statement1;
+    break;
+  case value2:
+    statement2;
+    break;
+...
+  default:
+    defaultStatement;
+    break;
+}
+
+*/
+
+/* 
+Multiple Identical Options in Switch Statements
+If the break statement is omitted from a switch statement's case, the following case statement(s) are executed until a break is encountered. 
+If you have multiple inputs with the same output, you can represent them in a switch statement like this:
+
+let result = "";
+switch(val) {
+  case 1:
+  case 2:
+  case 3:
+    result = "1, 2, or 3";
+    break;
+  case 4:
+    result = "4 alone";
+}
+*/
+
+
+/* 
+
+Replacing If Else Chains with Switch
+If you have many options to choose from, a switch statement can be easier to write than many chained if/else if statements. The following:
+
+if (val === 1) {
+  answer = "a";
+} else if (val === 2) {
+  answer = "b";
+} else {
+  answer = "c";
+}
+can be replaced with:
+
+switch(val) {
+  case 1:
+    answer = "a";
+    break;
+  case 2:
+    answer = "b";
+    break;
+  default:
+    answer = "c";
+}
+
+*/
+
+
+/*
+
+Sometimes people use an if/else statement to do a comparison, like this:
+
+function isEqual(a, b) {
+  if (a === b) {
+    return true;
+  } else {
+    return false;
+  }
+}
+But there's a better way to do this. Since === returns true or false, we can return the result of the comparison:
+
+function isEqual(a, b) {
+  return a === b;
+}
+
+*/

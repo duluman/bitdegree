@@ -370,3 +370,186 @@ function isEqual(a, b) {
 }
 
 */
+
+
+
+/* 
+
+Build JavaScript Objects
+You may have heard the term object before.
+
+Objects are similar to arrays, except that instead of using indexes to access and modify their data, you access the data in objects through what are called properties.
+
+Objects are useful for storing data in a structured way, and can represent real world objects, like a cat.
+
+Here's a sample cat object:
+
+const cat = {
+  "name": "Whiskers",
+  "legs": 4,
+  "tails": 1,
+  "enemies": ["Water", "Dogs"]
+};
+
+*/
+
+
+
+/*
+Accessing Object Properties with Dot Notation
+There are two ways to access the properties of an object: dot notation (.) and bracket notation ([]), similar to an array.
+
+Dot notation is what you use when you know the name of the property you're trying to access ahead of time.
+
+Here is a sample of using dot notation (.) to read an object's property:
+
+const myObj = {
+  prop1: "val1",
+  prop2: "val2"
+};
+
+const prop1val = myObj.prop1;
+const prop2val = myObj.prop2;
+prop1val would have a value of the string val1, and prop2val would have a value of the string val2.
+
+Accessing Object Properties with Bracket Notation
+The second way to access the properties of an object is bracket notation ([]). If the property of the object you are trying to access has a space in its name, you will need to use bracket notation.
+
+However, you can still use bracket notation on object properties without spaces.
+
+Here is a sample of using bracket notation to read an object's property:
+
+const myObj = {
+  "Space Name": "Kirk",
+  "More Space": "Spock",
+  "NoSpace": "USS Enterprise"
+};
+
+myObj["Space Name"];
+myObj['More Space'];
+myObj["NoSpace"];
+myObj["Space Name"] would be the string Kirk, myObj['More Space'] would be the string Spock, and myObj["NoSpace"] would be the string USS Enterprise.
+
+Note that property names with spaces in them must be in quotes (single or double).
+
+*/
+
+// Setup
+const testObj = {
+  12: "Namath",
+  16: "Montana",
+  19: "Unitas"
+};
+
+// Only change code below this line
+const playerNumber = 16;  // Change this line
+const player = testObj[playerNumber];   // Change this line
+
+
+/*
+Add New Properties to a JavaScript Object
+You can add new properties to existing JavaScript objects the same way you would modify them.
+
+Here's how we would add a bark property to ourDog:
+
+ourDog.bark = "bow-wow";
+or
+
+ourDog["bark"] = "bow-wow";
+Now when we evaluate ourDog.bark, we'll get his bark, bow-wow.
+
+Example:
+
+const ourDog = {
+  "name": "Camper",
+  "legs": 4,
+  "tails": 1,
+  "friends": ["everything!"]
+};
+
+ourDog.bark = "bow-wow";
+
+We can also delete properties from objects like this:
+
+delete ourDog.bark;
+
+*/
+
+/*
+
+Testing Objects for Properties
+Sometimes it is useful to check if the property of a given object exists or not. 
+We can use the .hasOwnProperty(propname) method of objects to determine if that object has the given property name. .hasOwnProperty() returns true or false if the property is found or not.
+
+Example
+
+const myObj = {
+  top: "hat",
+  bottom: "pants"
+};
+
+myObj.hasOwnProperty("top");
+myObj.hasOwnProperty("middle");
+
+*/
+
+/*
+Manipulating Complex Objects
+Sometimes you may want to store data in a flexible Data Structure. A JavaScript object is one way to handle flexible data. They allow for arbitrary combinations of strings, numbers, booleans, arrays, functions, and objects.
+
+Here's an example of a complex data structure:
+
+const ourMusic = [
+  {
+    "artist": "Daft Punk",
+    "title": "Homework",
+    "release_year": 1997,
+    "formats": [ 
+      "CD", 
+      "Cassette", 
+      "LP"
+    ],
+    "gold": true
+  }
+];
+This is an array which contains one object inside. The object has various pieces of metadata about an album. It also has a nested formats array. If you want to add more album records, you can do this by adding records to the top level array. Objects hold data in a property, which has a key-value format. In the example above, "artist": "Daft Punk" is a property that has a key of artist and a value of Daft Punk. JavaScript Object Notation or JSON is a related data interchange format used to store data.
+
+{
+  "artist": "Daft Punk",
+  "title": "Homework",
+  "release_year": 1997,
+  "formats": [ 
+    "CD",
+    "Cassette",
+    "LP"
+  ],
+  "gold": true
+}
+Note: You will need to place a comma after every object in the array, unless it is the last object in the array.
+
+Add a new album to the myMusic array. Add artist and title strings, release_year number, and a formats array of strings.
+*/
+
+const myMusic = [
+  {
+    "artist": "Billy Joel",
+    "title": "Piano Man",
+    "release_year": 1973,
+    "formats": [
+      "CD",
+      "8T",
+      "LP"
+    ],
+    "gold": true
+  },
+  {
+    "artist": "Romeo Santos",
+    "title": "Propuesta Indecente ",
+    "release_year": 2013,
+    "formats": [
+      "CD",
+      "iTunes"
+    ],
+    "gold": true
+  }
+];
